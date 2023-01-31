@@ -8,6 +8,7 @@
   --color5: #86A3B8;
   --color6: #AAE3E2;
   --color7: #F99417;
+  --color8: #967dc5;
 
   --Lexend: 'Lexend Deca', sans-serif;
   --Inter: 'Inter', sans-serif;
@@ -106,4 +107,22 @@ body{
   padding: .4375rem .625rem;
   height: 45px;
   width: 200px;
+}
+
+.container-gallery{
+  background-color: var(--color8);
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  width: 100%;
+}
+.container-gallery-grid{
+  width: 80%;
+  max-width: 800px;
+  margin: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.container-gallery h2{
+  color: var(--color4);
 }
