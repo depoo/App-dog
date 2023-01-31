@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perritos Aleatorios</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <header class="container-head">
+            <a href="#">
+                <span class="container-head__logo">Dogs App</span>
+            </a>
+        </header>
+        <span id="error"></span>
+
+        <section class="container-random" id="randomDogs">
+            <h2>Perritos Aleatorios</h2>
+            <div class="container-random-card">
+                <article>
+                    <img id="img1" alt="Foto perro aleatorio" class="container-random-photoDog">
+                    <!-- <img  alt="Foto perro aleatorio" class="container-random-photoDog"> -->
+                    <div class="container-random-buttom">
+                        <button id="btn1" class="container-random-buttomSave">
+                            Guardar en Favoritos
+                        </button>
+                    </div>
+                </article>
+                <article>
+                    <img id="img2" alt="Foto perro aleatorio" class="container-random-photoDog">
+                    <!-- <img alt="Foto perro aleatorio" class="container-random-photoDog"> -->
+                    <div class="container-random-buttom">
+                        <button id="btn2" class=" container-random-buttomSave">
+                            Guardar en favoritos
+                        </button>
+                    </div>
+                </article>
+            </div>
+            <div class="container-random-buttomshow">
+                <button type="button" class="container-random-showDog" id="buttonPet">
+                    Show new pet
+                </button>
+            </div>
+        </section>
+
+        <section class="container-upload" id="uploadingDog">
+            <h2>Sube la foto de tu perrito</h2>
+            <form id="uploadingForm">
+                <input type="file" id="file" name="file"> <br>
+                <button type="button" onclick="uploadPerritoPhoto()" class="container-upload-button">Subir y actualizar galeria</button>
+            </form>
+        </section>
+
+        <section class="container-gallery" id="favoriteDogs">
+            <h2>Perrito Favorito</h2>
+            <article>
+                <img id="img1" class="image" alt="Foto gato aleatorio">
+                <button class="container-gallery-deletePhoto">Sacar perrito de favoritos</button>
+            </article>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
