@@ -57,25 +57,37 @@ async function loadFavoriteDogs() {
     } else {
         const section = document.getElementById('favoriteDogs')
         section.innerHTML = "";
+        const divGrid = document.createElement('div');
         const h2 = document.createElement('h2');
         const h2Text = document.createTextNode('Perrito Favorito');
+
+        divGrid.classList.add("container-gallery-grid")
+
         h2.appendChild(h2Text);
-        section.appendChild(h2);
+        divGrid.appendChild(h2);
+        section.appendChild(divGrid);
 
         data.forEach(perrito => {
             const article = document.createElement('article');
-            const img = document.createElement('img');
-            const btn = document.createElement('button');
+            const img = document.createElement('img')
+            const divButtom = document.createElement('div')
+            const btn = document.createElement('button')
             const btnTxt = document.createTextNode('Sacar al perrito de favoritos');
+
+            img.classList.add("container-gallery-image")
+            divButtom.classList.add("container-gallery-buttom");
+            btn.classList.add("container-gallery-deletePhoto")
 
             btn.appendChild(btnTxt);
             btn.onclick = ()=> deleteFavoriteDog(perrito.id);
             img.src = perrito.image.url;
-            img.width = 150;
+            // img.width = 150;
 
+            divButtom.appendChild(btn)
             article.appendChild(img);
-            article.appendChild(btn);
-            section.appendChild(article)
+            article.appendChild(divButtom);
+            divGrid.appendChild(article)
+            section.appendChild(divGrid)
         });
     }
 }
